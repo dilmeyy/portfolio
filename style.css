@@ -14,14 +14,12 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(photos/Untitled-333.jpg);
+    background-image: url(photos/myf1.jpg);
     background-position: 90% 40%;
+    background-size: 450px 650px;
     background-repeat: no-repeat;
 }
-.background-image{
-    width: 350px;
-    height: 500px;
-}
+
 .container{
     padding:10px 10%;
 
@@ -74,7 +72,7 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 .header-text h1 span{
-    color: #55ff00; 
+    color: #ff004f; 
 }
 
 /* about*/
@@ -255,6 +253,20 @@ nav ul li a:hover::after{
 }
 .work :hover .layer{
     height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff; 
+    transition: background 0.5s;
+}
+.btn :hover{
+    background: #ff004f;
 }
  /*contact*/
  .contact-left{
