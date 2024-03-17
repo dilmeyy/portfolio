@@ -140,8 +140,7 @@
             
             <div class="work">
                 <img src="photos/mobile.jpg">
-                <!-- width
-                height="70" --> 
+                
                 <div class="layer"> 
                     <h3>Online shopping App</h3>
                     <p>rgnfreg ehbbgt gm fk k</p>
@@ -152,6 +151,7 @@
         <a href="#" class="btn"> See more </a>
      </div>
  </div>
+ 
 <!-- Contact-->
 <div id="contact">
     <div class="container">
@@ -168,7 +168,7 @@
                 <a href="photos/mycv.pdf" download class=" btn btn2 ">Download CV</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name="contact-formm">
                     <input type="text" name="Name" placeholder="Your name" required>
                     <input type="email" name="Email" placeholder="You Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -205,6 +205,19 @@
         sidemenu.style.right ="200px";
     }
  </script>
+
+<script> /*google sheet*/
+const scriptURL ="https://script.google.com/macros/s/AKfycbyqwAfemzpinwSS4VxW8YXhoP1sb16YGxbbRsW6pDYNjmgLW4PDSQYdeXaOEh_MbFoz/exec"
+const form = document.forms['contact-formm']
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => alert("Thank you! your form is submitted successfully."))
+    .then(() => {window.location.reload(); })
+    .catch(error => console.error('Error!', error.message))  
+})
+</script>
 </body>
 
 </html>
